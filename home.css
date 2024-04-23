@@ -1,0 +1,262 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+    margin-left: 10px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.header-left .special {
+    color: #EF8100;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 20px;
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+}
+
+.header-nav ul li a {
+    color: #EF8100;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.header-nav ul li a.active, .header-nav ul li a:hover {
+    border-bottom: 2px solid #EF8100;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: #EF8100;
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-family: 'Poller One', sans-serif;
+    color: #EF8100;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-top: 30px;
+    font-size: 2em;
+}
+
+.hero h3 {
+    font-size: 1.8em;
+    margin-top: 50px;
+    color: #EF8100;
+}
+
+.services .service-link {
+    display: inline-block;
+    margin: 10px;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.services .service-link:hover {
+    background-color: #EF8100;
+}
+
+.nearby-shops h2,
+.analytics h2,
+.reviews h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #EF8100;
+    font-size: 1.8em;
+}
+
+.analytics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.analytics .stat-circle {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 50%;
+    color: white;  /* Ensures text color is white */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nearby-shops .shop-card {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+}
+
+.nearby-shops img {
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #EF8100; /* Maintains the button color */
+    color: white; /* Ensures the text color is white */
+    padding: 10px 20px; /* Provides padding for better button sizing */
+    border: none; /* Removes any border */
+    border-radius: 5px; /* Adds rounded corners */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+    display: inline-block; /* Ensures the link is displayed as a block */
+    text-decoration: none; /* Removes underline from text */
+    font-weight: bold; /* Optional: makes the text bold */
+}
+
+.reviews {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.reviews h2 {
+    margin-bottom: 20px;
+    color: #EF8100;
+    font-size: 1.8em;
+}
+
+.review {
+    display: inline-block;
+    width: 35%;  /* Adjust width for two columns layout */
+    margin: 10px;
+    vertical-align: top;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.review i {
+    font-size: 3em;  /* Ensures icon size is adequate */
+    color: #EF8100;
+}
+
+.review div {
+    margin-left: 10px;  /* Gives some space next to the icon */
+}
+.about-contact {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1040px;
+    margin: 0 auto 40px auto; /* Adds 40px margin at the bottom */
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-contact h2 {
+    color: #EF8100;
+    font-size: 2em;
+    text-align: center;
+}
+
+.about-contact .content-wrapper {
+    max-width: 950px;  /* Reduced width for the text content */
+    margin: 0 auto;  /* Centers the text within the larger background */
+    text-align: left;  /* Aligns the text to the left within the centered content wrapper */
+}
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px; /* Adds 40px padding at the top */
+    text-align: center;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #EF8100;
+}
+
+@media (max-width: 768px) {
+    .header-nav ul, .footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav ul li, .footer ul li {
+        margin: 10px 0;
+    }
+
+    .header-left, .header-nav, .header-right {
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    .nearby-shops .shop-card, .reviews .review, .analytics .stat-circle {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .review {
+        width: 100%;  /* Full width for better mobile view */
+    }
+}

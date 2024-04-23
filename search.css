@@ -1,0 +1,261 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+    margin-left: 10px;
+    font-size: 1.5em; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.header-left .special {
+    color: #EF8100;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 20px; 
+}
+
+.header-nav ul li {
+    margin: 0 20px; 
+}
+
+.header-nav ul li a {
+    color: #EF8100; 
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.header-nav ul li a.active, .header-nav ul li a:hover {
+    border-bottom: 2px solid #EF8100; /* Underline for active or hovered link */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: #EF8100; 
+    margin-left: 40px; 
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 50px; 
+}
+.search-intro {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.search-intro h2 {
+    color: #EF8100; /* Orange color for the heading */
+    font-family: 'Poller One', sans-serif; /* Using Poller One font */
+    font-size: 2.5em; /* Slightly larger for emphasis */
+    margin-bottom: 10px; /* Space below the heading */
+}
+.search-intro p {
+    font-size: 1.8em;
+}
+.search-input {
+    padding: 10px;
+    width: 50%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px; /* Adjust to align inside the input correctly */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #EF8100; /* Sets icon color */
+    cursor: pointer; /* Indicates the icon is clickable */
+    pointer-events: none; /* Icon does not capture clicks, allowing the input to be clickable */
+}
+.search-container {
+    position: relative;
+    display: flex;
+    width: 35%; /* Reduced width from 50% to 45% */
+    margin: 20px auto;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* This will ensure vertical alignment is centered */
+    width: 35%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the search container horizontally */
+}
+
+.search-input {
+    flex-grow: 1; /* Allows the input to expand to fill the available space */
+    padding: 10px; /* Adjust padding for visual appearance and comfort */
+    border: 2px solid #ccc; /* Defines the border for clarity and style */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's dimensions */
+}
+
+.search-button {
+    background-color: #EF8100; /* Vibrant button color for visibility and style */
+    border: 2px solid #ccc; /* Continues the border styling from the input */
+    border-left: none; /* Removes the left border to make it seamless with the input */
+    border-radius: 0 5px 5px 0; /* Completes the rounded corners on the right */
+    padding: 11px 30px; /* Padding adjusted for icon size and spacing */
+    cursor: pointer; /* Cursor indicates clickable area */
+    display: flex;
+    align-items: center; /* Vertically centers the icon within the button */
+    justify-content: center; /* Horizontally centers the icon within the button */
+    box-sizing: border-box; /* Includes borders and padding in the measurement */
+    margin-top: 10px;
+}
+
+.search-button i {
+    color: white; /* Ensures the icon color contrasts the button for design consistency */
+    pointer-events: none; /* Prevents the icon from interfering with button functionality */
+}
+
+.filter-options {
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.filter-options select {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.barber-list {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.barber-shop {
+    background-color: #444;
+    margin: 50px;
+    padding: 80px;
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.barber-shop img {
+    width: 60%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.btn, .btn-direction {
+    background-color: #EF8100;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    width: 100%; /* Makes buttons full width of the container */
+    text-align: center;
+}
+
+.btn-direction {
+    background-color: #4285F4; /* Google blue for directions button */
+}
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px; /* Adds 40px padding at the top */
+    text-align: center;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #EF8100;
+}
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stacks buttons vertically on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav ul li {
+        margin: 5px 0; 
+    }
+
+    .header-left, .header-nav, .header-right {
+        flex: 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .search-input {
+        width: 90%;
+    }
+    
+    .barber-shop {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .search-container {
+        width: 90%; /* Adjusts width to fit smaller screens better */
+    }
+
+    .search-input, .search-button {
+        flex-grow: 1; /* Allows both elements to expand and fill the available space */
+    }
+}

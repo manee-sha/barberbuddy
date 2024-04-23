@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="forget.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="header">
+            <img src="images/icon.png" alt="Barber Buddy Icon" class="icon">
+            <h1><span class="special">B</span>ARBER <span class="special">B</span>UDDY</h1>
+        </div>
+        <div class="form-container">
+            <form action="index.html">
+                <input type="email" placeholder="Enter Email id" required>
+                <input type="text" placeholder="Enter OTP" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Set new password" required id="password">
+                    <span onclick="togglePasswordVisibility()" class="toggle-password"><i class="fas fa-eye"></i></span>
+                </div> 
+                <input type="tel" placeholder="Re-enter password" required>
+                <button type="submit" class="signup-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var icon = document.querySelector('.toggle-password i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script> 
+</body>
+</html>

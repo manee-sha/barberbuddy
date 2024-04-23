@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+    margin-left: 10px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.header-left .special {
+    color: #EF8100;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 20px;
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+}
+
+.header-nav ul li a {
+    color: #EF8100;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.header-nav ul li a.active, .header-nav ul li a:hover {
+    border-bottom: 2px solid #EF8100; /* Underline for active or hovered link */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: #EF8100;
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.header-right a.active {
+    border-bottom: 2px solid #EF8100; /* Highlight the active icon */
+}
+
+.logo {
+    width: 50px;
+}
+.notifications {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%; /* Adjust width as needed */
+    color: white; /* Text color for notifications */
+}
+
+.notification {
+    background: #555; /* Slightly lighter background for each notification */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: gray;
+}
+.notification1 {
+    color: white;
+    background: #555; /* Slightly lighter background for each notification */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.notification p, .notification1 p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.9em; /* Smaller text for compact appearance */
+}
+
+.notification p span, .notification1 p span{
+    display: block;
+    font-size: 0.8em; /* Even smaller text for date/time */
+    color: #bbb; /* Lighter text for less emphasis on date/time */
+}
+
+@media (max-width: 768px) {
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav ul li {
+        margin: 5px 0;
+    }
+
+    .header-left, .header-nav, .header-right {
+        flex: 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}

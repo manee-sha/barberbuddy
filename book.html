@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|MedievalSharp|Merriweather+Sans:800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/icon.png" alt="Barber Buddy Icon" class="logo">
+            <h1><span class="special">B</span>ARBER <span class="special">B</span>UDDY</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="book.html" class="active">Bookings</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="notification.html"><i class="fas fa-bell"></i></a>
+            <a href="profile.html"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+    <main>
+        <div class="bookings-list">
+            <div class="booking-entry upcoming">
+                <img src="images/Barber1.jpg" alt="Barber Shop">
+                <div class="booking-details">
+                    <h3>Barber Club, Kakkanad</h3>
+                    <p>Date: 2024-05-10, 15.00pm</p>
+                    <p3>Scheduled</p3>
+                    <button class="cancel-button" onclick="confirmCancellation()">Cancel</button>
+                </div>
+            </div>
+            <div class="booking-entry past">
+                <img src="images/Barber2.jpg" alt="Barber Shop">
+                <div class="booking-details">
+                    <h3>Fresh Salon, Thrikkakara</h3>
+                    <p>Date: 2024-04-15</p>
+                    <p2>Service Completed</p2>
+                </div>
+            </div>
+            <div class="booking-entry past">
+                <img src="images/Barber4.jpg" alt="Barber Shop">
+                <div class="booking-details">
+                    <h3>Saloon Deluxe, Kochi</h3>
+                    <p>Date: 2024-04-15</p>
+                    <p2>Service Completed</p2>
+                </div>
+            </div>
+            <div class="booking-entry past">
+                <img src="images/Barber3.jpg" alt="Barber Shop">
+                <div class="booking-details">
+                    <h3>Emirates Beauty Salon, Thrikkakara</h3>
+                    <p>Date: 2024-04-15</p>
+                    <p4>Cancelled</p4>
+                </div>
+            </div>
+        </div>
+        <div id="cancelModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Are you sure you want to cancel this booking?</p>
+                <button onclick="confirmCancellation()">Yes</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function confirmCancellation() {
+            var modal = document.getElementById('cancelModal');
+            modal.style.display = "block";
+            var closeBtns = document.querySelectorAll('.close, .modal-content button');
+            closeBtns.forEach(function(btn) {
+                btn.onclick = function() {
+                    modal.style.display = "none";
+                };
+            });
+        }
+        window.onclick = function(event) {
+            var modal = document.getElementById('cancelModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+        <footer>
+            <p>&copy; 2023 Barber Buddy. All Rights Reserved.</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </footer>
+</body>
+</html>

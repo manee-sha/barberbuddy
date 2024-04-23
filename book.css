@@ -1,0 +1,238 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+    color: white; /* Default text color for body */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the minimum height of the body is full viewport height */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: black; /* Text color for header */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+    margin-left: 10px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.header-left .special {
+    color: #EF8100; /* Accent color for brand highlights */
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 20px;
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+}
+
+.header-nav ul li a {
+    color: #EF8100; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-nav ul li a.active, .header-nav ul li a:hover {
+    border-bottom: 2px solid #EF8100; /* Visual cue for active/hover states */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: #EF8100;
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 50px; /* Logo dimensions */
+}
+
+.bookings-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows content to grow and fill the available space */
+}
+
+.bookings-list h3 {
+    color: #EF8100;
+}
+
+.bookings-list p {
+    font-size: 0.9em;
+}
+
+.bookings-list p2, .bookings-list p3, .bookings-list p4 {
+    font-size: 0.6em;
+}
+
+.bookings-list p2 {
+    color: green;
+}
+
+.bookings-list p3 {
+    color: yellow;
+}
+
+.bookings-list p4 {
+    color: rgb(97, 13, 13);
+}
+
+.booking-entry {
+    background: #444; /* Light background for entries */
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: white; /* Ensures text is visible against light background */
+    position: relative; /* Needed for absolute positioning of the cancel button */
+}
+
+.booking-entry img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.booking-details {
+    flex-grow: 1;
+}
+
+.booking-details h3, .booking-details p {
+    margin: 0; /* Adjusts margin for heading and paragraph in booking details */
+}
+
+.cancel-button {
+    position: absolute;
+    right: 30px; /* Right align within the entry */
+    top: 50%; /* Align vertically */
+    transform: translateY(-50%); /* Center vertically */
+    background-color: #EF8100; /* Button color */
+    color: white; /* Button text color */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Modal background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom of the viewport */
+    box-sizing: border-box; /* Ensures padding does not cause width overflow */
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #EF8100;
+}
+
+@media (max-width: 768px) {
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav ul li {
+        margin: 5px 0;
+    }
+
+    .header-left, .header-nav, .header-right {
+        flex: 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .booking-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0; /* Center on mobile */
+    }
+
+    .cancel-button {
+        position: static; /* Reset position for mobile */
+        width: 100%;
+        margin-top: 10px;
+    }
+}

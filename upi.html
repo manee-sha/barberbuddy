@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+    <link rel="stylesheet" href="upi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p data-label="Service:">Haircut</p>
+            <p data-label="Date:">2024-04-18</p>
+            <p data-label="Time:">14:00</p>
+            <p data-label="Total Cost:">$20</p>
+        </div>
+        
+        <div class="upi-payment">
+            <label for="upiId">Enter UPI ID:</label>
+            <input type="text" id="upiId" placeholder="example@upi">
+            <button onclick="confirmPayment()">Pay Now</button>
+        </div>
+    </main>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Payment Received and Booking Confirmed!</p>
+        </div>
+    </div>
+
+    <script>
+        function confirmPayment() {
+            var modal = document.getElementById('paymentModal');
+            modal.style.display = "block";
+            setTimeout(function() {
+                window.location.href = 'home.html';
+            }, 2000);
+        }
+
+        document.getElementsByClassName("close")[0].onclick = function() {
+            document.getElementById('paymentModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('paymentModal')) {
+                document.getElementById('paymentModal').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

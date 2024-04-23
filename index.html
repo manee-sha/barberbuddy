@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <div class="overlay"></div>
+            <img src="images/home.jpg" alt="Home Image" class="background-image">
+            <img src="images/icon.png" alt="Barber Buddy Icon" class="icon">
+            <h1><span>B</span>ARBER <span>B</span>UDDY</h1>
+            <p>Book the perfect style!</p>
+        </div>
+        <div class="form-section">
+            <form action="home.html">
+                <h2>Login</h2>
+                <input type="text" placeholder="Enter Email ID or Mobile Number" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Enter password" required id="password">
+                    <span onclick="togglePasswordVisibility()" class="toggle-password"><i class="fas fa-eye"></i></span>
+                </div>                
+                <button type="submit" class="signup-btn">Login</button>
+                <p class="account-info1"><a href="forget.html" class="signup-link2">Forget Password?</a></p>
+                <p>OR</p>
+                <button type="button" class="google-btn" onclick="window.location.href='home.html'">
+                    <span class="google-icon-wrapper">
+                        <img src="images/glogo.png" alt="Google logo" class="google-logo">
+                    </span>
+                    Continue with Google
+                </button>
+                <p class="account-info">Don’t have an account? <a href="create.html" class="signup-link">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var icon = document.querySelector('.toggle-password i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script>     
+</body>
+</html>

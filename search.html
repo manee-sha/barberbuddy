@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|MedievalSharp|Merriweather+Sans:800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/icon.png" alt="Barber Buddy Icon" class="logo">
+            <h1><span class="special">B</span>ARBER <span class="special">B</span>UDDY</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html" class="active">Search</a></li>
+                <li><a href="book.html">Bookings</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="notification.html"><i class="fas fa-bell"></i></a>
+            <a href="profile.html"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+    <main>
+        <section class="search-intro">
+            <h2>Find Your Style</h2>
+            <p>Discover and book the perfect barber shop near you</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search by Shop name or Location" class="search-input">
+                <button class="search-button">
+                    <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+                </button>
+            </div>                                 
+        </section>
+        
+        <section class="filter-options">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="rating">Highest Rated</option>
+                <option value="nearest">Nearest</option>
+            </select>
+        </section>
+        
+        <section class="barber-list">
+            <div class="barber-shop">
+                <img src="images/Barber1.jpg" alt="Barber Club, Kakkanad, Kochi">
+                <h3>Barber Club, Kakkanad</h3>
+                <p>Kochi</p>
+                <p>★★★★☆</p>
+                <div class="button-container">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="https://www.google.com/maps/place/The+Barber+Club/@9.9984041,76.3477132,16.59z/data=!4m6!3m5!1s0x3b080c97e7115275:0xbe92c29e5366c8b8!8m2!3d9.9984952!4d76.351039!16s%2Fg%2F11gdsdn86w?entry=ttu" class="btn btn-direction" target="_blank">Direction</a>
+                </div>
+            </div>
+            <div class="barber-shop">
+                <img src="images/Barber2.jpg" alt="Fresh Salon, Thrikkakara, Kochi">
+                <h3>Fresh Salon, Thrikkakara</h3>
+                <p>Kochi</p>
+                <p>★★★★★</p>
+                <div class="button-container">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="https://www.google.com/maps/search/fresh+salon/@10.4828778,75.9954724,9z/data=!3m1!4b1?entry=ttu" class="btn btn-direction" target="_blank">Direction</a>
+                </div>
+            </div>
+            <div class="barber-shop">
+                <img src="images/Barber3.jpg" alt="Barber Club, Kakkanad, Kochi">
+                <h3>Emirates Beauty Salon, Kakkanad</h3>
+                <p>Kochi</p>
+                <p>★★★★☆</p>
+                <div class="button-container">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="https://www.google.com/maps/place/The+Barber+Club/@9.9984041,76.3477132,16.59z/data=!4m6!3m5!1s0x3b080c97e7115275:0xbe92c29e5366c8b8!8m2!3d9.9984952!4d76.351039!16s%2Fg%2F11gdsdn86w?entry=ttu" class="btn btn-direction" target="_blank">Direction</a>
+                </div>
+            </div>
+            <div class="barber-shop">
+                <img src="images/Barber4.jpg" alt="Barber Club, Kakkanad, Kochi">
+                <h3>Saloon Deluxe, Kakkanad</h3>
+                <p>Kochi</p>
+                <p>★★★★☆</p>
+                <div class="button-container">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="https://www.google.com/maps/place/The+Barber+Club/@9.9984041,76.3477132,16.59z/data=!4m6!3m5!1s0x3b080c97e7115275:0xbe92c29e5366c8b8!8m2!3d9.9984952!4d76.351039!16s%2Fg%2F11gdsdn86w?entry=ttu" class="btn btn-direction" target="_blank">Direction</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Barber Buddy. All Rights Reserved.</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

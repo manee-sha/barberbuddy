@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment</title>
+    <link rel="stylesheet" href="card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p data-label="Service:">Haircut</p>
+            <p data-label="Date:">2024-04-18</p>
+            <p data-label="Time:">14:00</p>
+            <p data-label="Total Cost:">$20</p>
+        </div>
+        
+        <div class="card-payment">
+            <div class="card-details">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="1111 2222 3333 4444" maxlength="19">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="123" maxlength="3">
+            </div>
+            <button onclick="showModal('otpModal')">Make Payment</button>
+        </div>
+    </main>
+<!-- OTP Modal -->
+<div id="otpModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter OTP</h2>
+        <input type="text" id="otp" placeholder="Enter OTP here">
+        <button onclick="verifyOTP()">Confirm</button>
+    </div>
+</div>
+<!-- Custom Alert Modal -->
+<div id="alertModal" class="modal">
+    <div class="modal-content">
+        <span class="close-alert">&times;</span>
+        <p>Payment Received and Booking Confirmed!</p>
+    </div>
+</div>
+
+    <script src="card.js"></script>
+</body>
+</html>

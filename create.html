@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="header">
+            <img src="images/icon.png" alt="Barber Buddy Icon" class="icon">
+            <h1><span class="special">B</span>ARBER <span class="special">B</span>UDDY</h1>
+        </div>
+        <div class="form-container">
+            <form action="home.html">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Create password" required id="password">
+                    <span onclick="togglePasswordVisibility()" class="toggle-password"><i class="fas fa-eye"></i></span>
+                </div> 
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <p>OR</p>
+                <button type="button" class="google-btn" onclick="window.location.href='home.html'">
+                    <span class="google-icon-wrapper">
+                        <img src="images/glogo.png" alt="Google logo" class="google-logo">
+                    </span>
+                    Continue with Google
+                </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var icon = document.querySelector('.toggle-password i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script> 
+</body>
+</html>

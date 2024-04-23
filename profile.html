@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|MedievalSharp|Merriweather+Sans:800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/icon.png" alt="Barber Buddy Icon" class="logo">
+            <h1><span class="special">B</span>ARBER <span class="special">B</span>UDDY</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="book.html">Bookings</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="notification.html"><i class="fas fa-bell"></i></a>
+            <a href="profile.html" class="active"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <i class="fas fa-user-circle fa-5x"></i> <!-- Larger profile icon -->
+            <h2>John Doe</h2>
+            <p>Email: john.doe@example.com</p>
+            <button>Edit Profile</button>
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <form id="editForm">
+                        <h2>Edit Profile</h2>
+                        <label for="newName">New Name:</label>
+                        <input type="text" id="newName" name="newName" placeholder="Enter new name">
+                        <label for="newEmail">New Email:</label>
+                        <input type="email" id="newEmail" name="newEmail" placeholder="Enter new email">
+                        <button type="button" onclick="saveProfile()">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="profile-options">
+            <a href="settings.html" class="profile-link">Settings</a>
+            <a href="help.html" class="profile-link">Help & Support</a>
+            <a href="signup.html" class="profile-link" onclick="logoutUser()">Logout</a>
+        </div> 
+<div id="confirmModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('confirmModal')">&times;</span>
+        <p>Profile updated successfully!</p>
+    </div>
+</div>       
+    </main>
+    <footer>
+        <p>&copy; 2023 Barber Buddy. All Rights Reserved.</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+<script>
+    function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+function saveProfile() {
+    var newName = document.getElementById('newName').value;
+    var newEmail = document.getElementById('newEmail').value;
+    // Here you can handle the save logic, AJAX request etc.
+
+    // Display the confirmation modal instead of alert
+    document.getElementById('confirmModal').style.display = 'block';
+    closeModal('editModal');
+}
+
+document.querySelector('.profile-container button').onclick = function() {
+    document.getElementById('editModal').style.display = 'block';
+};
+
+// Close modal on clicking the close icon
+document.querySelectorAll('.modal .close').forEach(closeIcon => {
+    closeIcon.onclick = function() {
+        this.parentElement.parentElement.style.display = 'none';
+    };
+});
+
+</script>
+        <script>
+            function logoutUser() {
+                window.location.href = 'signup.html'; // Redirects to the signup page
+            }
+            </script>
+            
+</body>
+</html>

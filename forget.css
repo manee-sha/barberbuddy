@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Dark background for overall visibility */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Increased max width from 400px to 500px */
+    background-color: #f4f4f4; /* Light background for the form area */
+    padding: 40px; /* Increased padding from 20px to 40px */
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
+}
+
+.header h1 .special {
+    color: #EF8100;
+    text-shadow: none; /* No shadow on orange text to keep it clean */
+}
+
+.form-container {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.password-container {
+    position: relative;
+    width: 100%; /* Make sure the container takes full width */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    color: black;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px; /* Position it inside the input */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Align perfectly in the center */
+    cursor: pointer;
+    color: grey; /* Make icon color consistent */
+}
+
+
+.signup-btn,
+.google-btn {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding for the buttons */
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: #EF8100;
+    color: white;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285F4;
+    color: white;
+}
+
+.google-icon-wrapper {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 12px;
+}
+
+.google-logo {
+    width: 20px;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    color: black; /* Ensure visibility */
+}
